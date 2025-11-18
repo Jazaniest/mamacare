@@ -1,4 +1,7 @@
+import { useNavigate } from 'react-router-dom';
+
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-linear-to-r from-gray-50 to-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
@@ -14,11 +17,11 @@ const Hero = () => {
               Kemudihan dalam Gengaman untuk Kesehatan Ibu & Bayi
             </p>
             <div className="flex space-x-4">
-              <button className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-3 rounded font-medium transition">
+              <button
+                onClick={() => navigate('/dashboard')}
+                className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-3 rounded font-medium transition"
+              >
                 MASUK
-              </button>
-              <button className="border-2 border-teal-500 text-teal-500 hover:bg-teal-50 px-8 py-3 rounded font-medium transition">
-                DAFTAR
               </button>
             </div>
           </div>

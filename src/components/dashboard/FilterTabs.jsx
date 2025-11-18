@@ -1,5 +1,5 @@
 const FilterTabs = ({ activeTab, setActiveTab }) => {
-  const tabs = ['Semua', 'Normal', 'Berbelih', 'Obesiss'];
+  const tabs = ['Semua', 'Normal', 'Berbelih', 'Obesitas'];
 
   return (
     <div className="bg-white border-b">

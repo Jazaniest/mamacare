@@ -21,9 +21,16 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-teal-600 font-medium border-b-2 border-teal-600 pb-1">Beranda</Link>
-            <Link to="/dashboard" className="text-gray-600 hover:text-teal-600">Pendatan Ibu Hamil</Link>
-            <Link to="/dashboard" className="text-gray-600 hover:text-teal-600">Pemantauan Gizi</Link>
+            <Link to="/" className="text-teal-600 font-medium border-b-2 border-teal-600 pb-1">
+              Beranda
+            </Link>
+            <Link to="/dashboard" className="text-gray-600 hover:text-teal-600">
+              Pendaftaran Ibu Hamil
+            </Link>
+            <Link to="/dashboard" className="text-gray-600 hover:text-teal-600">
+              Pemantauan Gizi
+            </Link>
+          </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -35,14 +42,31 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-        </div>
 
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden pb-4">
-            <Link to="/" className="block py-2 text-teal-600 font-medium">Beranda</Link>
-            <Link to="/dashboard" className="block py-2 text-gray-600">Pendatan Ibu Hamil</Link>
-            <Link to="/dashboard" className="block py-2 text-gray-600">Pemantauan Gizi</Link>
+            <Link 
+              to="/" 
+              className="block py-2 text-teal-600 font-medium"
+              onClick={() => setIsOpen(false)}
+            >
+              Beranda
+            </Link>
+            <Link 
+              to="/dashboard" 
+              className="block py-2 text-gray-600"
+              onClick={() => setIsOpen(false)}
+            >
+              Pendaftaran Ibu Hamil
+            </Link>
+            <Link 
+              to="/dashboard" 
+              className="block py-2 text-gray-600"
+              onClick={() => setIsOpen(false)}
+            >
+              Pemantauan Gizi
+            </Link>
           </div>
         )}
       </div>
